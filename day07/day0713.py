@@ -21,7 +21,9 @@ def random_select():
     red_balls = [x for x in range(1, 34)]
     selected_balls = []
     selected_balls = sample(red_balls, 6)
-    selected_balls.sort()
+    # 从指定序列中随机获取指定长度的片断并随机排列。
+    # 注意：sample函数不会修改原有序列。
+    selected_balls.sort()  # sort() 函数用于对原列表进行排序
     selected_balls.append(randint(1, 16))
     return selected_balls
 
