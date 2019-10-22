@@ -4,6 +4,7 @@ def main():
         with open('guido.jpg', 'rb') as fs1:
             # guido.jpg这个文件必须先存在
             data = fs1.read()
+            # print(data)
             print(type(data))  # <class 'bytes'>
         with open('吉多.jpg', 'wb') as fs2:
             fs2.write(data)
