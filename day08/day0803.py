@@ -28,7 +28,8 @@ class Clock(object):
 
     def show(self):
         """显示时间"""
-        return '%02d:%02d:%02d' % \
+        # 2是宽度。如果整数不够2列就补上0
+        return '%03d:%02d:%02d' % \
                (self._hour, self._minute, self._second)
 
 
