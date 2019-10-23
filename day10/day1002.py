@@ -2,16 +2,17 @@ import tkinter  # 导入tkinter模块
 
 root = tkinter.Tk()
 root.minsize(280, 500)
-root.title('李蛟龙的计算器')
+root.title('菜鸟计算器')
 
 # 1.界面布局
 # 显示面板
 result = tkinter.StringVar()
-result.set(0)  # 显示面板显示结果1，用于显示默认数字0
+result.set('0')  # 初始值，显示面板显示结果1，用于显示默认数字0
 result2 = tkinter.StringVar()  # 显示面板显示结果2，用于显示计算过程
-result2.set('')
-# 显示版
-label = tkinter.Label(root, font=('微软雅黑', 20), bg='#EEE9E9', bd='9', fg='#828282', anchor='se', textvariable=result2)
+result2.set('初始过程')
+# 显示版  font 字体，字体大小；bg背景颜色；fg字体颜色   anchor:组件对齐方式；
+label = tkinter.Label(root, font=('微软雅黑', 20), bg='#EE9572', bd='9', fg='#32CD32', anchor='se', textvariable=result2)
+# 组件的放置和排版（pack,grid,place)
 label.place(width=280, height=170)
 label2 = tkinter.Label(root, font=('微软雅黑', 30), bg='#EEE9E9', bd='9', fg='black', anchor='se', textvariable=result)
 label2.place(y=170, width=280, height=60)
